@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FFE9F40-A4B7-48A2-8B06-3368399DE08A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Library_Management_System_v1._1</RootNamespace>
+    <AssemblyName>Library Management System v1.1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Muksith\Desktop\WinApp\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>NIBM Library Management System</ProductName>
+    <PublisherName>CODA</PublisherName>
+    <SuiteName>LMS</SuiteName>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>67EC0F6F5C2D26C877FEA3917AC2414DD4449D3E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.1.3\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.28\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.28\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.28\lib\net452\ZstdNet.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net461\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net461\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constant\IconClass.cs" />
+    <Compile Include="Constant\ImageClass.cs" />
+    <Compile Include="Controller\AuthorController.cs" />
+    <Compile Include="Controller\AddLibrariyanController.cs" />
+    <Compile Include="Controller\AdminDashboardController.cs" />
+    <Compile Include="Controller\BookController.cs" />
+    <Compile Include="Controller\BookIssueReturnController.cs" />
+    <Compile Include="Controller\CategoryController.cs" />
+    <Compile Include="Controller\CommonController.cs" />
+    <Compile Include="Controller\LibrariyanDashboardController.cs" />
+    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\MaterialController.cs" />
+    <Compile Include="Controller\MemberController.cs" />
+    <Compile Include="Controller\MemberFeeController.cs" />
+    <Compile Include="Controller\SplashController.cs" />
+    <Compile Include="Model\Activity.cs" />
+    <Compile Include="Model\Author.cs" />
+    <Compile Include="Model\BarChartModel.cs" />
+    <Compile Include="Model\Book.cs" />
+    <Compile Include="Model\BookIssue.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\DatabaseService.cs" />
+    <Compile Include="Model\Fine.cs" />
+    <Compile Include="Model\Guardian.cs" />
+    <Compile Include="Model\Librarian.cs" />
+    <Compile Include="Model\Member.cs" />
+    <Compile Include="Model\MemberFee.cs" />
+    <Compile Include="Model\Notification.cs" />
+    <Compile Include="Model\PiechartDataModel.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\LibrariansReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibrariansReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportViewer.Designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Add Author.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Add Author.Designer.cs">
+      <DependentUpon>Add Author.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Add Book Borrowing Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Add Book Borrowing Details.Designer.cs">
+      <DependentUpon>Add Book Borrowing Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Add Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Add Category.Designer.cs">
+      <DependentUpon>Add Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Add RackNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Add RackNo.Designer.cs">
+      <DependentUpon>Add RackNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddBook.Designer.cs">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddfineWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddfineWindow.Designer.cs">
+      <DependentUpon>AddfineWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddLibrariyan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddLibrariyan.Designer.cs">
+      <DependentUpon>AddLibrariyan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddMember.Designer.cs">
+      <DependentUpon>AddMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminNotifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminNotifications.Designer.cs">
+      <DependentUpon>AdminNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BookTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\BookTile.Designer.cs">
+      <DependentUpon>BookTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Custom Controls\RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Custom Controls\RJButton.Designer.cs">
+      <DependentUpon>RJButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Custom Controls\RJCircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Custom Controls\RJCircularPictureBox.Designer.cs">
+      <DependentUpon>RJCircularPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Custom Controls\RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Custom Controls\RJTextBox.designer.cs">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminActivityListTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\AdminActivityListTile.Designer.cs">
+      <DependentUpon>AdminActivityListTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LibrariyanHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LibrariyanHome.Designer.cs">
+      <DependentUpon>LibrariyanHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\notificationTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\notificationTile.Designer.cs">
+      <DependentUpon>notificationTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QRlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QRlogin.Designer.cs">
+      <DependentUpon>QRlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report\LibrariansReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LibrariansReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Add Author.resx">
+      <DependentUpon>Add Author.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Add Book Borrowing Details.resx">
+      <DependentUpon>Add Book Borrowing Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Add Category.resx">
+      <DependentUpon>Add Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Add RackNo.resx">
+      <DependentUpon>Add RackNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddBook.resx">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddfineWindow.resx">
+      <DependentUpon>AddfineWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddLibrariyan.resx">
+      <DependentUpon>AddLibrariyan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddMember.resx">
+      <DependentUpon>AddMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminActivityListTile.resx">
+      <DependentUpon>AdminActivityListTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminNotifications.resx">
+      <DependentUpon>AdminNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BookTile.resx">
+      <DependentUpon>BookTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Custom Controls\RJTextBox.resx">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LibrariyanHome.resx">
+      <DependentUpon>LibrariyanHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\notificationTile.resx">
+      <DependentUpon>notificationTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QRlogin.resx">
+      <DependentUpon>QRlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Library Management System v1.1_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
